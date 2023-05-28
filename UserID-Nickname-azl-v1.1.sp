@@ -20,11 +20,11 @@ public void OnPluginStart()
 
 public void OnClientPostAdminCheck(int client)
 {
-      char oldname[64], newname[64];
+        char oldname[64], newname[64];
         
-      GetClientName(client, oldname, sizeof(oldname));
-      Format(newname, sizeof(newname), "%s [#%d]", oldname, GetClientUserId(client));
-      SetClientName(client, newname);
+        GetClientName(client, oldname, sizeof(oldname));
+        Format(newname, sizeof(newname), "%s [#%d]", oldname, GetClientUserId(client));
+        SetClientName(client, newname);
 }
 
 public Action Hook_SayText2(UserMsg msg_id, any msg, const int[] players, int playersNum, bool reliable, bool init)
